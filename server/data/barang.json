@@ -1,0 +1,58 @@
+[
+    {
+        "foto": "abcd.jpg",
+        "nama": "permen",
+        "harga_beli": 3000,
+        "harga_jual": 4000,
+        "stok": 10
+    },
+    {
+        "foto": "abcd.jpg",
+        "nama": "tas",
+        "harga_beli": 3000,
+        "harga_jual": 4000,
+        "stok": 10
+    },
+    {
+        "foto": "abcd.jpg",
+        "nama": "baju",
+        "harga_beli": 3000,
+        "harga_jual": 4000,
+        "stok": 10
+    },
+    {
+        "foto": "abcd.jpg",
+        "nama": "jaket",
+        "harga_beli": 3000,
+        "harga_jual": 4000,
+        "stok": 10
+    },
+    {
+        "foto": "abcd.jpg",
+        "nama": "daster",
+        "harga_beli": 3000,
+        "harga_jual": 4000,
+        "stok": 10
+    },
+    {
+        "foto": "abcd.jpg",
+        "nama": "pulpen",
+        "harga_beli": 3000,
+        "harga_jual": 4000,
+        "stok": 10
+    },
+    {
+        "foto": "abcd.jpg",
+        "nama": "pensil",
+        "harga_beli": 3000,
+        "harga_jual": 4000,
+        "stok": 10
+    },
+    {
+        "foto": "abcd.jpg",
+        "nama": "jepitan",
+        "harga_beli": 3000,
+        "harga_jual": 4000,
+        "stok": 10
+    }
+]
