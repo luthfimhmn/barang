@@ -52,14 +52,17 @@ function Contoh(params) {
     formData.append("foto", product.foto);
 
     try {
-      let dataPost = await fetch("http://localhost:3000/goods", {
+      let dataPost = await fetch(`${process.env.REACT_APP_BASEURL}/products`, {
         method: "post",
         body: formData,
       });
 
-      let dataProducts = await fetch("http://localhost:3000/goods?limit=100", {
-        method: "get",
-      });
+      let dataProducts = await fetch(
+        `${process.env.REACT_APP_BASEURL}/products?limit=100`,
+        {
+          method: "get",
+        }
+      );
 
       dataProducts = await dataProducts.json();
       dataPost = await dataPost.json();

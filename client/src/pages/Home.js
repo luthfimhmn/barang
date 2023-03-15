@@ -6,7 +6,7 @@ const Home = () => {
     const [goods, setGoods] = useState(null);
     useEffect(()=> {
         async function fetchData () {
-            const testing = await fetch("http://localhost:3000/goods?limit=100")
+            const testing = await fetch(`${process.env.REACT_APP_BASEURL}/products?limit=100`)
             const data = await testing.json();
             setGoods(data)
         }
@@ -16,7 +16,7 @@ const Home = () => {
 
 
     async function uploadImage() {
-        const link = "http://localhost:3000/goods"
+        const link = `${process.env.REACT_APP_BASEURL}/products`
     }
     
     if(goods) {
