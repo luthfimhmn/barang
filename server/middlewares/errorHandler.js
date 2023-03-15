@@ -10,7 +10,7 @@ const errorHandler = (err,req,res,next) => {
     } else { 
         console.log(err)
     }
-    res.status(400).json(errors)
+    res.status(500).json(errors)
 }
 
 

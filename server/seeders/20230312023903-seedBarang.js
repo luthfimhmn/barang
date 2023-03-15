@@ -20,7 +20,6 @@ module.exports = {
       element.updatedAt = new Date();
       element.createdAt = new Date();
     });
-    console.log(dataBarang, 'INI DATA BARANG')
     await queryInterface.bulkInsert('barangs', dataBarang)
   },
 

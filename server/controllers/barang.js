@@ -46,7 +46,6 @@ class barangController {
 
     static async update (req,res,next) {
          try {
-            console.log(req.file, 'INI TEST')
             const id  = req.params.id;
             const satuBarang = await barang.findByPk(id);
 
