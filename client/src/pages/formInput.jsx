@@ -1,20 +1,20 @@
 import { useRef, useState } from "react";
 import "../styles/global.css";
 
-function Contoh(params) {
+function FormInput(params) {
   const [product, setProduct] = useState({
-    nama: "",
-    harga_jual: 0,
-    harga_beli: 0,
-    stok: 0,
-    foto: "",
+    name: "",
+    purchase_price: 0,
+    selling_price: 0,
+    stock: 0,
+    photo: "",
   });
 
   function handleChange(e, key) {
-    if (key === "foto") {
+    if (key === "photo") {
       setProduct({
         ...product,
-        ["foto"]: e.target.files[0],
+        ["photo"]: e.target.files[0],
       });
     } else {
       const { value } = e.target;
@@ -45,11 +45,11 @@ function Contoh(params) {
   async function postProduct(product) {
     const formData = new FormData();
 
-    formData.append("nama", product.nama);
-    formData.append("harga_jual", product.harga_jual);
-    formData.append("harga_beli", product.harga_beli);
-    formData.append("stok", product.stok);
-    formData.append("foto", product.foto);
+    formData.append("name", product.name);
+    formData.append("purchase_price", product.purchase_price);
+    formData.append("selling_price", product.selling_price);
+    formData.append("stock", product.stock);
+    formData.append("photo", product.photo);
 
     try {
       let dataPost = await fetch(`${process.env.REACT_APP_BASEURL}/products`, {
@@ -64,10 +64,11 @@ function Contoh(params) {
         }
       );
 
+      //update data products in parent
       dataProducts = await dataProducts.json();
-      dataPost = await dataPost.json();
-      params.setGoods(dataProducts);
+      params.setProducts(dataProducts);
 
+      dataPost = await dataPost.json();
       return dataPost;
     } catch (error) {
       console.log(error);
@@ -87,68 +88,68 @@ function Contoh(params) {
         <input
           type="text"
           className="form__input"
-          name="product.nama"
-          value={product.nama}
-          onChange={(e) => handleChange(e, "nama")}
-          id="product.nama"
-          placeholder="Enter Nama Produk"
+          name="product.name"
+          value={product.name}
+          onChange={(e) => handleChange(e, "name")}
+          id="product.name"
+          placeholder="Enter Product Name"
         />
         <span className="form__error">A Sample Error Message</span>
       </div>
       <div className="form__item">
-        <label htmlFor="product.harga_jual" className="form__label">
-          Enter Sell Price:
-        </label>
-        <input
-          type="number"
-          className="form__input form__input--small"
-          name="product.harga_jual"
-          value={product.harga_jual}
-          onChange={(e) => handleChangeMoney(e, "harga_jual")}
-          id="product.harga_jual"
-          placeholder="Enter Sell Price"
-        />
-        <span className="form__error">A Sample Error Message</span>
-      </div>
-      <div className="form__item">
-        <label htmlFor="product.harga_beli" className="form__label">
-          Enter Buy Price:
+        <label htmlFor="product.purchase_price" className="form__label">
+          Enter Purchase Price:
         </label>
         <input
           type="Number"
           className="form__input"
-          name="product.harga_beli"
-          value={product.harga_beli}
-          onChange={(e) => handleChange(e, "harga_beli")}
-          id="product.harga_beli"
-          placeholder="Enter Buy Price"
+          name="product.purchase_price"
+          value={product.purchase_price}
+          onChange={(e) => handleChange(e, "purchase_price")}
+          id="product.purchase_price"
+          placeholder="Enter Purchase Price"
         />
         <span className="form__error">A Sample Error Message</span>
       </div>
       <div className="form__item">
-        <label htmlFor="product.stok" className="form__label">
+        <label htmlFor="product.selling_price" className="form__label">
+          Enter Selling Price:
+        </label>
+        <input
+          type="number"
+          className="form__input form__input--small"
+          name="product.selling_price"
+          value={product.selling_price}
+          onChange={(e) => handleChange(e, "selling_price")}
+          id="product.selling_price"
+          placeholder="Enter Selling Price"
+        />
+        <span className="form__error">A Sample Error Message</span>
+      </div>
+      <div className="form__item">
+        <label htmlFor="product.stock" className="form__label">
           Enter Stock:
         </label>
         <input
           type="number"
           className="form__input"
-          name="product.stok"
-          value={product.stok}
-          onChange={(e) => handleChange(e, "stok")}
-          id="product.stok"
-          placeholder="Enter Stock"
+          name="product.stock"
+          value={product.stock}
+          onChange={(e) => handleChange(e, "stock")}
+          id="product.stock"
+          placeholder="Enter Product Stock"
         />
         <span className="form__error">A Sample Error Message</span>
       </div>
       <div className="form__item">
-        <label htmlFor="product.foto" className="form__label">
+        <label htmlFor="product.photo" className="form__label">
           Upload Image:
         </label>
         <input
           type="file"
           className="form__input"
-          id="product.foto"
-          onChange={(e) => handleChange(e, "foto")}
+          id="product.photo"
+          onChange={(e) => handleChange(e, "photo")}
         />
         <span className="form__error">A Sample Error Message</span>
       </div>
@@ -159,4 +160,4 @@ function Contoh(params) {
   );
 }
 
-export default Contoh;
+export default FormInput;

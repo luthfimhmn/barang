@@ -6,7 +6,6 @@ const App = () => { return (
     <Router>
         <Routes>
             <Route exact path="/" element={<Home/>} />
-            <Route exact path="/testing" element={<h1>TESTING AJA BRO</h1>} />
         </Routes>
     </Router>
     )

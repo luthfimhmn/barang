@@ -1,0 +1,58 @@
+[
+    {
+        "photo": "abcd.jpg",
+        "name": "permen",
+        "purchase_price": 3000,
+        "selling_price": 4000,
+        "stock": 10
+    },
+    {
+        "photo": "abcd.jpg",
+        "name": "tas",
+        "purchase_price": 3000,
+        "selling_price": 4000,
+        "stock": 10
+    },
+    {
+        "photo": "abcd.jpg",
+        "name": "baju",
+        "purchase_price": 3000,
+        "selling_price": 4000,
+        "stock": 10
+    },
+    {
+        "photo": "abcd.jpg",
+        "name": "jaket",
+        "purchase_price": 3000,
+        "selling_price": 4000,
+        "stock": 10
+    },
+    {
+        "photo": "abcd.jpg",
+        "name": "daster",
+        "purchase_price": 3000,
+        "selling_price": 4000,
+        "stock": 10
+    },
+    {
+        "photo": "abcd.jpg",
+        "name": "pulpen",
+        "purchase_price": 3000,
+        "selling_price": 4000,
+        "stock": 10
+    },
+    {
+        "photo": "abcd.jpg",
+        "name": "pensil",
+        "purchase_price": 3000,
+        "selling_price": 4000,
+        "stock": 10
+    },
+    {
+        "photo": "abcd.jpg",
+        "name": "jepitan",
+        "purchase_price": 3000,
+        "selling_price": 4000,
+        "stock": 10
+    }
+]
