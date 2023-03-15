@@ -31,7 +31,13 @@ class barangController {
 
             const imagePath = imageValidator(req.file);
 
-            const barangBaru = await barang.create({foto: imagePath,nama,harga_beli,harga_jual,stok}, {returning: true})
+            const barangBaru = await barang.create({
+                foto: imagePath,
+                nama,
+                harga_beli: parseInt(harga_beli),
+                harga_jual: parseInt(harga_jual),
+                stok: parseInt(stok)
+            }, {returning: true})
         
             res.status(201).json(
                 {
